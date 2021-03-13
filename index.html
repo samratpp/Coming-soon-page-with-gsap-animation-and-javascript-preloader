@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Coming Soon</title>
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/loader.css">
+  </head>
+  <body>
+      <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+      </div>
+      <!-- loader ends  -->
+      <div id="progress"></div>
+      <div class="container">
+        <section class="logo animate">
+          <img src="images/company-logo.png" alt="Your Logo">
+        </section>
+        <section class="tagline">
+          <h1 class="animate">Your Tagline</h1>
+          <p class="animate">Coming soon...</p>
+        </section>
+        <aside class="social">
+          <hr>
+          <span>Stay in touch:</span>
+          <ul>
+            <li>
+              <a href="#" target="_blank" class="link-fb">Fb</a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="link-in">In</a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="link-tw">Tw</a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+      <script>
+        window.addEventListener('load',function(){
+          document.querySelector('body').classList.add("loaded")  
+        });
+        gsap.from(".animate", {duration:1, y:-50, opacity: 0, stagger: .6});
+        gsap.from("hr", {duration:1, x:-1000, delay:1.5, opacity: 0});
+        gsap.from(".social span", {duration:1, x:-1000, delay:1.5, opacity: 0});
+        gsap.from(".link-fb", {duration:1, y:15, delay:2, opacity: 0});
+        gsap.from(".link-in", {duration:1, y:15, delay:2.15, opacity: 0});
+        gsap.from(".link-tw", {duration:1, y:15, delay:2.25, opacity: 0});
+      </script>
+  </body>
+</html>
+
+<!-- by samrat pandey  -->
